@@ -1,0 +1,9 @@
+<?php
+if(!session_id()){
+    session_start();
+}
+unset($_SESSION['access_token']);
+unset($_SESSION['state']);
+unset($_SESSION['userData']);
+//https://www.codexworld.com/login-with-github-oauth-api-using-php/
+header('location:index.github.php');
