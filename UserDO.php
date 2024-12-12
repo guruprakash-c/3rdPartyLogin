@@ -8,5 +8,6 @@ namespace UserProps{
 		public $photo;
 		public $gender;
 		public $location;
+		public $isverified;
 	}
 }

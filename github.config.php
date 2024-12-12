@@ -7,7 +7,7 @@ require_once "modules/gh.config.php";
 final class GitHubMicroservice{
    public $gitClient = NULL;
 
-   public function __construct(){
+   function __construct(){
       define('GH_CLIENT_ID', ''); 
       define('GH_CLIENT_SECRET', ''); 
       define('GH_REDIRECT_URL', 'http://localhost/3rdPartyLogin/index.github.php'); 
@@ -70,7 +70,7 @@ final class GitHubMicroservice{
      return $accessToken;
    }
 
-   public function GitLogin(){
+   public function GitHubAuthUrl(){
       $gitHubLoginUrl = NULL;
       // Generate a random hash and store in the session for security 
       $state = hash('sha256', microtime(TRUE) . rand() . $_SERVER['REMOTE_ADDR']);     
@@ -79,7 +79,7 @@ final class GitHubMicroservice{
       return $gitHubLoginUrl;
    }
 
-   public function __destruct(){
+   function __destruct(){
       $this->gitClient = NULL;
    }
 

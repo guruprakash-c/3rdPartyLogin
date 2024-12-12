@@ -4,9 +4,13 @@ if(isset($_SESSION)) session_start();
 
 require_once "google.config.php";
 require_once "github.config.php";
+require_once "linkedin.config.php";
+require_once "microsoft.config.php";
 
 $googleClient = new GoogleMicroService();
 $gitHubClient = new GitHubMicroservice();
+$linkedInClient = new LinkedInMicroservice();
+$msClient = new MicrosoftMicroservices();
 ?>
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,8 +38,9 @@ $gitHubClient = new GitHubMicroservice();
                     <?php 
                         $loginServices = array(
                             'Google:bi-google' => $googleClient->GetGoogleAuthUrl(NULL,NULL),
-                            'GitHub:bi-github' => $gitHubClient->GitLogin(),
-                            'Microsoft:bi-microsoft' => NULL
+                            'GitHub:bi-github' => $gitHubClient->GitHubAuthUrl(),
+                            'Linkedin:bi-linkedin' => $linkedInClient->LinkedInAuthUrl(),
+                            'Microsoft:bi-microsoft' => $msClient->MicrosoftAuthUrl()
                         );
                     ?>
                     <div class="btn-group">

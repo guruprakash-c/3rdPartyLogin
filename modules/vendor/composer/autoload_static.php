@@ -32,6 +32,10 @@ class ComposerStaticInit2ac4596901ce0150cc4e5e053561918b
         array (
             'Monolog\\' => 8,
         ),
+        'L' => 
+        array (
+            'League\\OAuth2\\Client\\' => 21,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -44,7 +48,6 @@ class ComposerStaticInit2ac4596901ce0150cc4e5e053561918b
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
-            'Facebook\\' => 9,
         ),
     );
 
@@ -59,8 +62,8 @@ class ComposerStaticInit2ac4596901ce0150cc4e5e053561918b
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -77,6 +80,11 @@ class ComposerStaticInit2ac4596901ce0150cc4e5e053561918b
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'League\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/oauth2-client/src',
+            1 => __DIR__ . '/..' . '/league/oauth2-linkedin/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -105,10 +113,6 @@ class ComposerStaticInit2ac4596901ce0150cc4e5e053561918b
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
-        ),
-        'Facebook\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
         ),
     );
 
