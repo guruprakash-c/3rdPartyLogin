@@ -67,7 +67,7 @@ final class LinkedInMicroservice{
               $full_name = $email_info['name'] ?? $email_info['given_name'];
               $email = $email_info['email'];
               $profile_picture = $email_info['picture'];
-              $location = $email_info['country'];
+              $location = isset($email_info['country']) ? $email_info['country'] : NULL;
               $isVerified = $email_info['email_verified'] ?? FALSE;
               if(boolval($isVerified) == TRUE){
                 $userDetails = new UP\UserDO();
