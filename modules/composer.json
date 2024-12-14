@@ -1,6 +1,5 @@
 {
     "require": {
-        "google/apiclient": "^2.16.0",
-        "league/oauth2-linkedin": "^5.1"
+        "google/apiclient": "^2.16.0"
     }
 }

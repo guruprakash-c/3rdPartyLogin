@@ -65,6 +65,9 @@ final class GoogleMicroservice{
   public function GetGoogleAuthUrl(){
     return $this->googleClient->createAuthUrl();
   }
+  public function RevokeToken(){
+    return $this->googleClient->revokeToken();
+  }
   public function __destruct(){
       $this->googleClient = NULL;
    }
